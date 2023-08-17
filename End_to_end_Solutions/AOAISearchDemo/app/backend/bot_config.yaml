@@ -26,7 +26,7 @@ approach_classifier:
     user_message_format: "{utterance}"
     assistant_message_format: "{formatted_answer}"
   openai_settings:
-    engine: <YOUR-AZURE-OPENAI-DEPLOYMENT-NAME>
+    engine: "chat"
     max_tokens: 1
     temperature: 0.0
     top_p: 0.0
@@ -60,7 +60,7 @@ structured_query_nl_to_sql:
     user_message_format: "{utterance}"
     assistant_message_format: "{formatted_answer}"
   openai_settings:
-    engine: <YOUR-AZURE-OPENAI-DEPLOYMENT-NAME>
+    engine: "chat"
     temperature: 0.0
     top_p: 0.0
     max_tokens: 2000
@@ -68,8 +68,8 @@ structured_query_nl_to_sql:
     presence_penalty: 0
     stop: null
   model_params:
-    model_name: <YOUR-AZURE-OPENAI-MODEL-NAME>
-    total_max_tokens: <YOUR-AZURE-OPENAI-MODEL-TOKEN-LIMIT>
+    model_name: "gpt-35-turbo"
+    total_max_tokens: 2000
 
 structured_final_answer_generation:
   system_prompt: |-
@@ -77,10 +77,10 @@ structured_final_answer_generation:
   history:
     include: false
   openai_settings:
-    engine: <YOUR-AZURE-OPENAI-DEPLOYMENT-NAME>
+    engine: "chat"
     temperature: 0.0
     top_p: 0.0
-    max_tokens: 2000
+    max_tokens: 800
     frequency_penalty: 0
     presence_penalty: 0
     stop: null
@@ -98,7 +98,7 @@ unstructured_search_query_generation:
     user_message_format: "{utterance}"
     assistant_message_format: "{formatted_answer}"
   openai_settings:
-    engine: <YOUR-AZURE-OPENAI-DEPLOYMENT-NAME>
+    engine: "chat"
     temperature: 0.0
     top_p: 0.0
     max_tokens: 50
@@ -120,11 +120,11 @@ unstructured_final_answer_generation:
     user_message_format: "{utterance}"
     assistant_message_format: "{formatted_answer}"
   openai_settings:
-    engine: <YOUR-AZURE-OPENAI-DEPLOYMENT-NAME>
+    engine: "chat"
     temperature: 0.0
     top_p: 0.0
     max_tokens: 800
     n: 1
   model_params:
-    model_name: <YOUR-AZURE-OPENAI-MODEL-NAME>
-    total_max_tokens: <YOUR-AZURE-OPENAI-MODEL-TOKEN-LIMIT>
+    model_name: gpt-35-turbo
+    total_max_tokens: 2000
